@@ -1,0 +1,13 @@
+1.
+for the basic, luxury and premium witch one you choose
+i want to be able to switch easily between them to see the difference
+between the prices and what i get.
+
+1.2
+design the layout for the testionial slug page.
+
+2.
+add like a gift card option.
+
+3.
+Choose for how many people you want to buy it for.
