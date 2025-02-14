@@ -4,7 +4,10 @@ const nextConfig: NextConfig = {
   /* config options here */
   images: {
     remotePatterns: [{
-      hostname: 'images.ctfassets.net', // Contentful's image CDN
+       // Contentful's image CDN
+      protocol: 'https', 
+      hostname: 'images.ctfassets.net',
+
     }],
   },
 };
