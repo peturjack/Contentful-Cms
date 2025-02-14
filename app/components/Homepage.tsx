@@ -28,7 +28,7 @@ const Homepage = async () => {
         <h1 className="text-5xl font-bold">{datas.headerTitle}</h1>
         <p className="text-xl mt-2 mb-4 text-gray-200">{datas.subheading}</p>
         <Link href={datas.ctaLink}>
-          <button className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">
+          <button className="bg-blue-900 text-white py-2 px-4 rounded hover:bg-blue-800 transition duration-300">
             {datas.ctaButton}
           </button>
         </Link>

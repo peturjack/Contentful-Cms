@@ -12,7 +12,7 @@ const ProductCard = async () => {
   const datas = entries.items;
 
   return (
-    <div className="flex flex-col sm:flex sm:flex-row-reverse gap-4 py-4">
+    <div className="flex flex-col sm:flex sm:flex-row gap-4 py-4">
       {datas.map((data: FieldsType) => {
         const imageUrl = `https:${data.fields.spaImage.fields.file.url}`;
         return (

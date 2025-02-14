@@ -21,9 +21,9 @@ export default async function Page({
   console.log(reference);
   const imageUrl = `https:${data.spaImage.fields.file.url}`;
   return (
-    <div className="p-6 rounded-lg border-2 grid gap-4 w-2/3 mx-auto my-10 ">
+    <div className="p-6 rounded-lg border-2 grid gap-4 w-2/3 mx-auto my-10  ">
       {/* spa plan and image */}
-      <section className="grid grid-cols-2 gap-4 ">
+      <section className="flex gap-4">
         <div className="space-y-4">
           <h1 className="text-4xl">{data.treatmentLevels}</h1>
           <div className="space-x-2">
@@ -39,8 +39,8 @@ export default async function Page({
 
         <Image
           priority={true}
-          width={600}
-          height={200}
+          width={1000}
+          height={1000}
           className="w-full h-[200] object-cover rounded-lg "
           src={imageUrl}
           alt=""
@@ -50,14 +50,17 @@ export default async function Page({
 
       <section
         className="prose-base prose-p:text-gray-600 
-        prose-headings:font-semibold "
+        prose-headings:font-semibold border-b-2 pb-4"
       >
         {documentToReactComponents(data.fullDescription)}
       </section>
 
       {/* benefits details sections */}
-      <div className="flex">
-        <section className="prose flex-1">
+      <div className="flex gap-4">
+        <section
+          className="prose prose-p:m-0 prose-headings:font-semibold prose-headings:text-xl
+        flex-1 "
+        >
           {documentToReactComponents(data.benefits)}
         </section>
         {/* other Plans section */}

@@ -20,14 +20,14 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 py-6 px-6">
+    <div className="py-6 px-6">
       {nav.map((item: FieldsType) => {
         return (
           <div className="flex items-center justify-between" key={item.sys.id}>
             <Link href={"/"} className="text-2xl cursor-pointer">
               {item.fields.companyName.slice(0, 6)}
 
-              <span className="text-blue-500">
+              <span className="bg-blue-900 text-white p-1">
                 {item.fields.companyName.slice(7)}
               </span>
             </Link>
@@ -36,7 +36,7 @@ const Navbar = () => {
                 <Link
                   className={`hover:text-blue-500 duration-300 p-2 text-lg ${
                     pathname === link.fields.url
-                      ? "bg-blue-500 text-white hover:text-white"
+                      ? "bg-blue-900 text-white hover:text-white"
                       : ""
                   }`}
                   key={link.sys.id}
