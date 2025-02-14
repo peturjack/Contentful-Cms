@@ -40,7 +40,7 @@ export default async function Page({
         <Image
           priority={true}
           width={600}
-          height={600}
+          height={200}
           className="w-full h-[200] object-cover rounded-lg "
           src={imageUrl}
           alt=""

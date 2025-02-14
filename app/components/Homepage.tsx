@@ -25,7 +25,7 @@ const Homepage = async () => {
             {/* Background Image */}
             <Image
               priority={true}
-              height={1000}
+              height={600}
               width={1000}
               src={imageUrl}
               alt="Background"
