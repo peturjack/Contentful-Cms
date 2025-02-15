@@ -41,7 +41,7 @@ export default async function Page({
           priority={true}
           width={500}
           height={500}
-          className=" h-[200] w-full object-cover rounded-lg "
+          className="h-[200px] w-full object-cover rounded-lg "
           src={imageUrl}
           alt=""
         />
