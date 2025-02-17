@@ -56,7 +56,7 @@ export default async function Page({
       </section>
 
       {/* benefits details sections */}
-      <div className="flex-col md:flex gap-4">
+      <div className="flex-col flex md:flex-row gap-4">
         <section
           className="prose max-w-full prose-p:m-0 prose-headings:font-semibold prose-headings:text-xl
         flex-1 "
@@ -64,7 +64,7 @@ export default async function Page({
           {documentToReactComponents(data.benefits)}
         </section>
         {/* other Plans section */}
-        <section className="flex flex-col gap-4 flex-1 prose-base">
+        <section className="flex flex-col gap-4 md:flex-1 prose-base">
           <h3 className="font-semibold">Other plans</h3>
           <div className="flex flex-col md:flex-row gap-4">
             <Link

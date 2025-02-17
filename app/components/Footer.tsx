@@ -10,7 +10,7 @@ const Footer = async () => {
   const data: FieldsType = entries.items[0].fields;
 
   return (
-    <footer className="bg-gray-200 text-black py-10">
+    <footer className="bg-gray-100 text-black py-10">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Logo or Brand Name */}
