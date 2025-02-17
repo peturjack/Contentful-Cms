@@ -19,7 +19,7 @@ const ProductCard = async () => {
           <Suspense fallback={<ProductCardSkeleton />} key={data.sys.id}>
             <Link
               href={`/${data.fields.slug}`}
-              className="relative cursor-pointer h-[300] md:max-h-[300px] w-full hover:w-[2000px] transition-all duration-300 ease-in-out"
+              className="relative cursor-pointer h-[150px] md:h-[300px] sm:flex-1 md:hover:flex-[1.5] transition-all duration-300 ease-in-out"
             >
               <Image
                 priority={true}
@@ -31,10 +31,10 @@ const ProductCard = async () => {
               />
               <div className="absolute rounded bg-black bg-opacity-60 inset-0 text-white flex flex-col justify-center p-4">
                 <div className="max-w-sm mx-auto">
-                  <h3 className="text-2xl font-bold mb-2">
+                  <h3 className="text-xl md:text-2xl font-bold mb-2">
                     {data.fields.treatmentLevels}
                   </h3>
-                  <p className="text-gray-200 text-lg">
+                  <p className="text-gray-200 text-base line-clamp-3 md:line-clamp-none md:text-lg">
                     {data.fields.spaDescription}
                   </p>
                 </div>

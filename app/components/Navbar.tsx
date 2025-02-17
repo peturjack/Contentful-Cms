@@ -27,7 +27,7 @@ const Navbar = () => {
             <Link href={"/"} className="text-2xl cursor-pointer">
               {item.fields.companyName.slice(0, 6)}
 
-              <span className="bg-blue-900 text-white p-1">
+              <span className="bg-gradient-to-r from-[#50A7BA] to-[#6793AE] text-white p-1">
                 {item.fields.companyName.slice(7)}
               </span>
             </Link>

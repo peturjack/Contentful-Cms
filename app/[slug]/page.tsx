@@ -18,13 +18,13 @@ export default async function Page({
   });
   const data: FieldsType = entries.items[0].fields;
   const reference: FieldsType = data.referenceTreatment;
-  console.log(reference);
+
   const imageUrl = `https:${data.spaImage.fields.file.url}`;
   return (
-    <div className="p-6 rounded-lg border-2 grid gap-4 w-2/3 mx-auto my-10 bg-white ">
+    <div className="p-6 rounded-lg border-2 grid gap-4 mx-6 mb-4 bg-white ">
       {/* spa plan and image */}
-      <section className="flex gap-4">
-        <div className="space-y-4">
+      <section className="flex flex-col md:flex-row gap-4">
+        <div className="space-y-4 md:flex-1">
           <h1 className="text-4xl">{data.treatmentLevels}</h1>
           <div className="space-x-2">
             <span className="py-1 px-3 bg-gray-100 rounded-full">
@@ -41,7 +41,7 @@ export default async function Page({
           priority={true}
           width={500}
           height={500}
-          className="h-[200px] w-full object-cover rounded-lg "
+          className="h-[300px] 2xl:h-[400px] md:flex-1 object-cover rounded-lg "
           src={imageUrl}
           alt=""
         />
@@ -56,9 +56,9 @@ export default async function Page({
       </section>
 
       {/* benefits details sections */}
-      <div className="flex gap-4">
+      <div className="flex-col md:flex gap-4">
         <section
-          className="prose prose-p:m-0 prose-headings:font-semibold prose-headings:text-xl
+          className="prose max-w-full prose-p:m-0 prose-headings:font-semibold prose-headings:text-xl
         flex-1 "
         >
           {documentToReactComponents(data.benefits)}
@@ -66,7 +66,7 @@ export default async function Page({
         {/* other Plans section */}
         <section className="flex flex-col gap-4 flex-1 prose-base">
           <h3 className="font-semibold">Other plans</h3>
-          <div className="space-x-4">
+          <div className="flex flex-col md:flex-row gap-4">
             <Link
               href={`/${reference[0].fields.slug}`}
               className="py-2 px-4 border-2 rounded-lg hover:bg-gray-100 duration-300"
