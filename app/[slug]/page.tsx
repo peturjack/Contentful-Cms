@@ -21,10 +21,10 @@ export default async function Page({
 
   const imageUrl = `https:${data.spaImage.fields.file.url}`;
   return (
-    <div className="p-6 rounded-lg border-2 grid gap-4 mx-6 mb-4 bg-white ">
+    <div className="p-6 rounded-lg  max-w-screen-2xl mx-auto grid gap-4 mb-4 bg-white ">
       {/* spa plan and image */}
-      <section className="flex flex-col md:flex-row gap-4">
-        <div className="space-y-4 md:flex-1">
+      <section className="flex flex-col-reverse gap-4">
+        <div className="space-y-4">
           <h1 className="text-4xl">{data.treatmentLevels}</h1>
           <div className="space-x-2">
             <span className="py-1 px-3 bg-gray-100 rounded-full">
@@ -41,7 +41,7 @@ export default async function Page({
           priority={true}
           width={500}
           height={500}
-          className="h-[300px] 2xl:h-[400px] md:flex-1 object-cover rounded-lg "
+          className="h-[300px] 2xl:h-[400px] w-full object-center object-cover rounded-lg "
           src={imageUrl}
           alt=""
         />

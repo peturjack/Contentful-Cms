@@ -45,7 +45,7 @@ const Footer = async () => {
         </div>
 
         {/* Social Media Links */}
-        <div className="flex justify-center mt-6 gap-x-4">
+        <div className="flex md:justify-center mt-6 gap-x-4">
           {data.socialMedia.map((item: FieldsType) => {
             return (
               <div key={item.sys.id}>
@@ -58,7 +58,7 @@ const Footer = async () => {
         </div>
 
         {/* Copyright Section */}
-        <div className="text-center mt-6">
+        <div className="md:text-center mt-6">
           <p className="text-gray-600">
             &copy; {new Date().getFullYear()} {data.copyright}
           </p>

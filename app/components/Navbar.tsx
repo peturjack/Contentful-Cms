@@ -36,7 +36,7 @@ const Navbar = () => {
                 <Link
                   className={`hover:text-blue-500 duration-300 p-2 text-lg ${
                     pathname === link.fields.url
-                      ? "bg-blue-900 text-white hover:text-white"
+                      ? "border-b-4 border-[#50A7BA]"
                       : ""
                   }`}
                   key={link.sys.id}
