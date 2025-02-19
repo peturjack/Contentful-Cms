@@ -34,7 +34,7 @@ const Navbar = () => {
             <ul className="space-x-4">
               {item.fields.links.map((link: FieldsType) => (
                 <Link
-                  className={`hover:text-blue-500 duration-300 p-2 text-lg ${
+                  className={`hover:text-[#50A7BA] duration-300 p-2 text-lg ${
                     pathname === link.fields.url
                       ? "border-b-4 border-[#50A7BA]"
                       : ""
