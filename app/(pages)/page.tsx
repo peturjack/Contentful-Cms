@@ -1,4 +1,4 @@
-import Homepage from "./components/Homepage";
+import Homepage from "../components/Homepage";
 
 const page = async () => {
   return (

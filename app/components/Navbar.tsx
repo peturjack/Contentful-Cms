@@ -23,7 +23,7 @@ const Navbar = () => {
     <div className="py-6 px-6">
       {nav.map((item: FieldsType) => {
         return (
-          <div className="flex items-center justify-between" key={item.sys.id}>
+          <div className="flex items-center justify-between " key={item.sys.id}>
             <Link href={"/"} className="text-2xl cursor-pointer">
               {item.fields.companyName.slice(0, 6)}
 

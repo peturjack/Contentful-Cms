@@ -1,27 +1,22 @@
-import React from "react";
-import client from "../lib/contentful";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { FieldsType } from "contentful";
 import Image from "next/image";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Link from "next/link";
+import React from "react";
+import CardImage from "./CardImage";
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const slug = (await params).slug;
+type Props = {
+  data: FieldsType;
+  image: string;
+  reference: FieldsType;
+};
 
-  const entries = await client.getEntries({
-    content_type: "testimonialSpaCards",
-    "fields.slug": slug,
-  });
-  const data: FieldsType = entries.items[0].fields;
-  const reference: FieldsType = data.referenceTreatment;
-
-  const imageUrl = `https:${data.spaImage.fields.file.url}`;
+const Card = ({ data, image, reference }: Props) => {
   return (
-    <div className="p-6 rounded-lg 2xl:max-w-screen-2xl md:max-w-screen-xl mx-auto grid gap-4 mb-4 bg-white ">
+    <div
+      className="px-6 rounded-lg 2xl:max-w-screen-2xl md:max-w-screen-xl
+     mx-auto grid gap-4 mb-4 bg-white "
+    >
       {/* spa plan and image */}
       <section className="flex flex-col-reverse gap-4">
         <div className="space-y-4">
@@ -37,14 +32,7 @@ export default async function Page({
           <p className="text-gray-600 ">{data.spaDescription}</p>
         </div>
 
-        <Image
-          priority={true}
-          width={2000}
-          height={2000}
-          className="h-[300px] md:h-[600px] object-cover object-[50%_35%] w-full rounded-lg "
-          src={imageUrl}
-          alt=""
-        />
+        <CardImage src={image} />
       </section>
       {/* Treatment details section */}
 
@@ -57,14 +45,13 @@ export default async function Page({
 
       {/* benefits details sections */}
       <div className="flex-col flex md:flex-row gap-4">
-        <section
-          className="prose max-w-full prose-p:m-0 prose-headings:font-semibold prose-headings:text-xl
-        flex-1 "
-        >
-          {documentToReactComponents(data.benefits)}
+        <section className="w-1/2">
+          <div className="prose prose-p:m-0 prose-headings:font-semibold prose-headings:text-xl">
+            {documentToReactComponents(data.benefits)}
+          </div>
         </section>
         {/* other Plans section */}
-        <section className="flex flex-col gap-4 md:flex-1 prose-base">
+        <section className="flex flex-col gap-4 prose-base">
           <h3 className="font-semibold">Other plans</h3>
           <div className="flex flex-col md:flex-row gap-4">
             <Link
@@ -80,8 +67,18 @@ export default async function Page({
               {`${reference[1].fields.treatmentLevels} Plan`}
             </Link>
           </div>
+
+          <Link
+            className="text-center bg-gradient-to-r from-[#50A7BA] to-[#6793AE]
+             text-white py-2 px-4 rounded-lg transition duration-300"
+            href={data.ctaButtonUrl}
+          >
+            {data.ctaButtonText}
+          </Link>
         </section>
       </div>
     </div>
   );
-}
+};
+
+export default Card;

@@ -19,7 +19,8 @@ const ProductCard = async () => {
           <Suspense fallback={<ProductCardSkeleton />} key={data.sys.id}>
             <Link
               href={`/${data.fields.slug}`}
-              className="relative cursor-pointer h-[150px] md:h-[300px] sm:flex-1 md:hover:flex-[1.5] transition-all duration-300 ease-in-out"
+              className="relative cursor-pointer h-[150px] md:h-[300px] sm:flex-1 md:hover:flex-[1.5]
+               transition-all duration-300 ease-in-out"
             >
               <Image
                 priority={true}

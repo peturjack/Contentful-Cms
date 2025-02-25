@@ -31,8 +31,12 @@ const Homepage = async () => {
         <p className="text-center text-lg md:text-xl mt-2 mb-4 text-gray-200">
           {datas.subheading}
         </p>
+
         <Link href={datas.ctaLink}>
-          <button className="bg-gradient-to-r from-[#50A7BA] to-[#6793AE] text-white py-2 px-4 rounded  transition duration-300">
+          <button
+            className="bg-gradient-to-r from-[#50A7BA] to-[#6793AE] text-white py-2 px-4
+           rounded transition duration-300"
+          >
             {datas.ctaButton}
           </button>
         </Link>
