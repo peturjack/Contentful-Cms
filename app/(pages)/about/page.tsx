@@ -13,7 +13,7 @@ const AboutPage = async () => {
   const data: FieldsType = entries.items[0].fields;
 
   const headerImg = `https://${data.firstImage.fields.file.url}`;
-  const storyImg = `https://${data.secondImage.fields.file.url}`;
+  const storyImg = `https:${data.secondImage.fields.file.url}`;
   return (
     <div className="mb-8">
       <Header
