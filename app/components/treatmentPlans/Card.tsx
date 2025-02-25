@@ -1,6 +1,5 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { FieldsType } from "contentful";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import CardImage from "./CardImage";
