@@ -1,6 +1,7 @@
 import React from "react";
-import client from "../../lib/contentful";
+
 import { FieldsType } from "contentful";
+import client from "../../lib/contentful";
 import Card from "../../components/treatmentPlans/Card";
 
 export default async function Page({
