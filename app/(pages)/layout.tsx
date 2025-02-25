@@ -30,7 +30,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-background`}
       >
         <Navbar />
-        {children}
+        <main className="px-6">{children}</main>
         <Footer />
       </body>
     </html>

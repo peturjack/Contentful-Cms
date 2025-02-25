@@ -17,7 +17,7 @@ const Homepage = async () => {
   const imageUrl = `https:${datas.backgroundImage?.fields.file.url}`;
 
   return (
-    <div className="flex flex-col px-6">
+    <div className="flex flex-col">
       <div
         className={`w-full h-[300px] md:h-[600px] bg-cover bg-center flex flex-col
            justify-center items-center text-white px-6

@@ -1,25 +1,28 @@
-1
+1 (Done)
 for the basic, luxury and premium witch one you choose
 i want to be able to switch easily between them to see the difference
-between the prices and what i get. (Done)
+between the prices and what i get.
 
-1.2
+1.2 (Done)
 slug testimonials page:
-design the layout for the testimonial slug page. (Done)
+design the layout for the testimonial slug page. 
 
-1.3 
+2 (Done)
 Footer Component: 
-instead of writing out the social links add icons and
-add icons to the contact us sections instead of writing Email, ohone and address.
+instead of writing out the social links add icons (done) and mby
+add icons to the contact us sections instead of writing Email, phone and address.
 
-2
+2.1 (in progress)
+make an about page and structure the layout.
+
+3
 Modal Component:
 make the modal when you click the book now button in the slug testimonial page.
 
-2.2
+3.2
 Modal Component:
 add like a gift card option.
 
-3.
+3.3
 Modal Component:
 Add an option where you can choose for how many people you want to buy it for.

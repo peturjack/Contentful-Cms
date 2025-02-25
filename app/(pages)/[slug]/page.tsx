@@ -17,7 +17,7 @@ export default async function Page({
   });
   const data: FieldsType = entries.items[0].fields;
   const reference: FieldsType = data.referenceTreatment;
-
   const imageUrl = `https:${data.spaImage.fields.file.url}`;
+
   return <Card data={data} image={imageUrl} reference={reference} />;
 }
