@@ -1,5 +1,4 @@
 import React from "react";
-
 import { FieldsType } from "contentful";
 import client from "../../lib/contentful";
 import Card from "../../components/treatmentPlans/Card";
